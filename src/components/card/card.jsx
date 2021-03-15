@@ -10,15 +10,46 @@ export class Card extends React.PureComponent{
   }
 
   render(){
+    let { plugin } = this.props;
+    let categoryClassName = plugin.categories[0].replace(" ","-");
+    let cardClassNames = `card ${categoryClassName}`
     return (
-      <div className="card">
-        <p className="pluginTitle">{this.props.plugin.title}</p>
-        <p className="pluginDescription">{this.renderHTML(this.props.plugin.description)}</p>
-        <a className="listing-link" href={this.cleanPath()}>Embeddable Link</a>
+      <div className={cardClassNames}>
+        {this.renderPluginTitle()}
+        <p className="pluginDescription">{this.renderHTML(plugin.description)}</p>
+        <a className="listing-link" href={this.cleanPath()} target="_blank" rel="noopener noreferrer">
+          Embeddable Link
+        </a>
     </div>
     );
   }
 
+  renderPluginTitle() {
+    let { plugin } = this.props;
+    let codapUrl = "http://codap.concord.org/releases/latest/";
+    let pluginPath = "";
+    let urlRoot = window.location.origin+window.location.pathname;
+    if (plugin.path.match(/^http/i)) {
+      pluginPath = plugin.path;
+    }
+    else {
+      urlRoot=urlRoot.replace(/index.html$/, '');
+      pluginPath = urlRoot+plugin.path;
+    }
+    if (codapUrl.match(/^https/i) && !pluginPath.match(/^https/i)) {
+      pluginPath=pluginPath.replace(/http/i,'https');
+    }
+
+    if (pluginPath.match(/^https/i) && !codapUrl.match(/^https/i)) {
+      codapUrl=codapUrl.replace(/http/i,'https');
+    }
+    
+    return (
+      <a href={`${codapUrl}?di=${pluginPath}`} className="pluginTitle" target="_blank" rel="noopener noreferrer">
+        {plugin.title}
+      </a>
+    );
+  }
   renderHTML(description) {
     return parse(DOMPurify.sanitize(description || ""));
   }

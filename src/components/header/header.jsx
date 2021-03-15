@@ -10,7 +10,7 @@ export class Header extends React.Component {
             <img src="https://codap.concord.org/wp-content/themes/cc/img/codap-logo.png" className="codap-logo" alt="Common Online Data Analysis Program" />
           </a>
           <div className="header-title">
-            CODAP Data Interactive Plugins
+            <span>CODAP Data Interactive Plugins</span>
           </div>
       </div>
     );
