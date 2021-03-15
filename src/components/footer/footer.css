@@ -1,0 +1,21 @@
+@import "../var.css";
+
+.footer {
+  background-color: var(--cc-teal-light3);
+  bottom: 0;
+  height: 120px;
+  width: 100%;
+  color: var(--cc-teal-light1);
+  font-size: 12px;
+}
+
+#cc {
+  position: absolute;
+  right: 0;
+
+}
+
+#cc img {
+  width: 120px;
+  height: auto;
+}

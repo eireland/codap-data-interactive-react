@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import dataInteractives from "./data_interactive_map.json";
+import { Header } from "./components/header/header";
+import { CardList } from "./components/card-list/card-list";
+import { Footer } from "./components/footer/footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.PureComponent {
+  constructor() {
+    super();
+
+    this.state = {
+      dataInteractives: dataInteractives.data_interactives
+    }
+  }
+
+  render() {
+    console.log(dataInteractives);
+    return (
+      <div className="App">
+        <Header />
+        <CardList plugins={this.state.dataInteractives} />
+        <Footer />
+      </div>
+    );
+  }
 }
 
-export default App;

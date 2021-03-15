@@ -1,0 +1,19 @@
+@import "../var.css";
+
+.header {
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border-bottom: solid 1px var(--cc-charcoal-light2);
+}
+
+.codap-logo {
+  top: 10px;
+  left: 20px;
+  height: auto;
+  width: 120px;
+}
