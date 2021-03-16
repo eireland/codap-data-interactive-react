@@ -1,12 +1,13 @@
 import React from 'react';
 import "./header.css"
+import { NavigationTabs } from "./navigation";
 
 export class Header extends React.Component {
-
   render() {
     return (
       <div className="header">
         {this.renderHeaderTitle()}
+        <NavigationTabs plugins={this.props.plugins}/>
       </div>
     );
   }

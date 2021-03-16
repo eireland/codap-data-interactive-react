@@ -1,0 +1,13 @@
+@import "../../var.css";
+
+.navigationTabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-bottom: solid 1px var(--cc-charcoal-light1)
+}
+
+.tab {
+
+}

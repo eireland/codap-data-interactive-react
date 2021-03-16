@@ -1,5 +1,5 @@
 .card-list {
-  top: 75px;
+  top: 100px;
   margin: 15px 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

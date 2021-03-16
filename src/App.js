@@ -14,11 +14,11 @@ export default class App extends React.PureComponent {
   }
 
   render() {
-    console.log(dataInteractives);
+    const plugins = this.state.dataInteractives;
     return (
       <div className="App">
-        <Header />
-        <CardList plugins={this.state.dataInteractives} />
+        <Header plugins={plugins}/>
+        <CardList plugins={plugins} />
         <Footer />
       </div>
     );

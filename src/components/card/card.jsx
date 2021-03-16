@@ -5,9 +5,9 @@ import parse from "html-react-parser";
 import "./card.css"
 
 export class Card extends React.PureComponent{
-  constructor(props){
-    super();
-  }
+  // constructor(props){
+  //   super();
+  // }
 
   render(){
     let { plugin } = this.props;
