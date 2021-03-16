@@ -17,7 +17,7 @@ export class Card extends React.PureComponent{
       <div className={cardClassNames}>
         {this.renderPluginTitle()}
         <p className="pluginDescription">{this.renderHTML(plugin.description)}</p>
-        <a className="listing-link" href={this.cleanPath()} target="_blank" rel="noopener noreferrer">
+        <a className="embeddableLink" href={this.cleanPath()} target="_blank" rel="noopener noreferrer">
           Embeddable Link
         </a>
     </div>
@@ -43,7 +43,7 @@ export class Card extends React.PureComponent{
     if (pluginPath.match(/^https/i) && !codapUrl.match(/^https/i)) {
       codapUrl=codapUrl.replace(/http/i,'https');
     }
-    
+
     return (
       <a href={`${codapUrl}?di=${pluginPath}`} className="pluginTitle" target="_blank" rel="noopener noreferrer">
         {plugin.title}

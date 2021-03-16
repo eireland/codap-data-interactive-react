@@ -1,42 +1,58 @@
-@import "../var.css";
+@import "../../var.css";
 
 .card {
   display: flex;
   flex-direction: column;
   border: 1px solid grey;
   border-radius: 5px;
-  padding: 5px;
-  cursor: pointer;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 8px;
   backface-visibility: hidden;
   transform: translateZ(0);
   transition: transform 0.25s ease-out;
-  max-width: 300px;
-  font-size: 12px;
-  color: var(--cc-charcoal)
+  color: var(--cc-charcoal);
+  min-height: 200px;
 }
 
 .card.Partners {
-  background-color: var(--cc-teal-light4);
+  background-color: var(--cc-teal-light5);
 }
 .card.Utilities {
-  background-color: var(--cc-orange-light3);
+  background-color: var(--cc-orange-light4);
 }
 .card.Data-Games {
   background-color: var(--cc-charcoal-light2);
 }
 .card.Data-Worlds {
-  background-color: var(--feedback-green-light2);
-}
-
-.card:hover {
-  transform: scale(1.05);
+  background-color: var(--feedback-green-light4);
 }
 
 .pluginTitle {
-  font-size: 16px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.pluginTitle:hover {
+  color: var(--cc-teal-dark1);
+}
+.pluginTitle:active {
+  color: var(--cc-teal-dark2);
 }
 
-.plugInDescription {
-  margin: 5px;
+.pluginDescription {
+  margin: 10px;
+}
+.pluginDescription > a {
+  text-decoration: none;
+  color: var(--cc-teal-dark1);
+}
+
+.embeddableLink {
+  position: absolute;
+  bottom: 10px;
+  font-size: 12px;
+}
+.embeddableLink:hover {
+  color: var(--cc-teal-dark1);
+}
+.embeddableLink:active {
+  color: var(--cc-teal-dark2);
 }
