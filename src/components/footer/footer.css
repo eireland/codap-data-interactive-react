@@ -1,4 +1,4 @@
-@import "../var.css";
+@import "../../var.css";
 
 .footer {
   background-color: var(--cc-teal-light3);
@@ -7,12 +7,13 @@
   width: 100%;
   color: var(--cc-teal-light1);
   font-size: 12px;
+  position: relative;
 }
 
 #cc {
   position: absolute;
-  right: 0;
-
+  right: 25px;
+  bottom: 25px;
 }
 
 #cc img {

@@ -7,21 +7,27 @@ import { Footer } from "./components/footer/footer";
 export default class App extends React.PureComponent {
   constructor() {
     super();
-
+    this.handleCategorySelect = this.handleCategorySelect.bind(this);
     this.state = {
-      dataInteractives: dataInteractives.data_interactives
+      dataInteractives: dataInteractives.data_interactives,
+      categorySelected: "Partners",
     }
   }
 
   render() {
-    console.log(dataInteractives);
+    const plugins = this.state.dataInteractives;
+    const categorySelected = this.state.categorySelected;
     return (
       <div className="App">
-        <Header />
-        <CardList plugins={this.state.dataInteractives} />
+        <Header plugins={plugins} categorySelected={categorySelected} handleCategorySelect={this.handleCategorySelect}  />
+        <CardList plugins={plugins} categorySelected={categorySelected} />
         <Footer />
       </div>
     );
+  }
+
+  handleCategorySelect(category) {
+    this.setState({ categorySelected: category });
   }
 }
 

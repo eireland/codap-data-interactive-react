@@ -5,19 +5,20 @@ import parse from "html-react-parser";
 import "./card.css"
 
 export class Card extends React.PureComponent{
-  constructor(props){
-    super();
-  }
+  // constructor(props){
+  //   super();
+  // }
 
   render(){
     let { plugin } = this.props;
     let categoryClassName = plugin.categories[0].replace(" ","-");
-    let cardClassNames = `card ${categoryClassName}`
+    // let cardClassNames = `card ${categoryClassName}`
+    let cardClassNames = `card`
     return (
       <div className={cardClassNames}>
         {this.renderPluginTitle()}
         <p className="pluginDescription">{this.renderHTML(plugin.description)}</p>
-        <a className="listing-link" href={this.cleanPath()} target="_blank" rel="noopener noreferrer">
+        <a className="embeddableLink" href={this.cleanPath()} target="_blank" rel="noopener noreferrer">
           Embeddable Link
         </a>
     </div>
@@ -43,7 +44,7 @@ export class Card extends React.PureComponent{
     if (pluginPath.match(/^https/i) && !codapUrl.match(/^https/i)) {
       codapUrl=codapUrl.replace(/http/i,'https');
     }
-    
+
     return (
       <a href={`${codapUrl}?di=${pluginPath}`} className="pluginTitle" target="_blank" rel="noopener noreferrer">
         {plugin.title}
