@@ -20,9 +20,14 @@
   border-radius: 10px 10px 0 0;
   padding: 0 20px;
   margin: 0 5px;
-  border: solid 1px var(--cc-charcoal-light1);
+  border-top: solid 1px var(--cc-charcoal-light1);
+  border-left: solid 1px var(--cc-charcoal-light1);
+  border-right: solid 1px var(--cc-charcoal-light1);
   width: fit-content;
   cursor: pointer;
+}
+.tab:active {
+  color: white;
 }
 
 .tab.Partners {
@@ -41,19 +46,35 @@
 background-color: var(--feedback-green-light4);
 }
 
-.tab.Partners.react-tabs__tab--selected {
+.tab.Partners:hover {
+  background-color: var(--cc-teal-light3);
+}
+
+.tab.Utilities:hover {
+  background-color: var(--cc-orange-light2);
+}
+
+.tab.Data.Games:hover {
+  background-color: var(--cc-charcoal-light1);
+}
+
+.tab.Data.Worlds:hover {
+background-color: var(--feedback-green-light2);
+}
+
+.tab.Partners.selected {
     background-color: var(--cc-teal-light3);
 }
 
-.tab.Utilities.react-tabs__tab--selected {
+.tab.Utilities.selected {
     background-color: var(--cc-orange-light2);
 }
 
-.tab.Data.Games.react-tabs__tab--selected {
+.tab.Data.Games.selected {
     background-color: var(--cc-charcoal-light1);
 }
 
-.tab.Data.Worlds.react-tabs__tab--selected {
+.tab.Data.Worlds.selected {
   background-color: var(--feedback-green-light2);
 }
 

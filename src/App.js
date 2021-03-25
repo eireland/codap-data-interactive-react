@@ -10,7 +10,7 @@ export default class App extends React.PureComponent {
     this.handleCategorySelect = this.handleCategorySelect.bind(this);
     this.state = {
       dataInteractives: dataInteractives.data_interactives,
-      categorySelected: "Partners"
+      categorySelected: "Partners",
     }
   }
 
@@ -19,7 +19,7 @@ export default class App extends React.PureComponent {
     const categorySelected = this.state.categorySelected;
     return (
       <div className="App">
-        <Header plugins={plugins} handleCategorySelect={this.handleCategorySelect}  />
+        <Header plugins={plugins} categorySelected={categorySelected} handleCategorySelect={this.handleCategorySelect}  />
         <CardList plugins={plugins} categorySelected={categorySelected} />
         <Footer />
       </div>

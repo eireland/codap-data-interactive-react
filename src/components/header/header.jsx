@@ -7,7 +7,7 @@ export class Header extends React.Component {
     return (
       <div className="header">
         {this.renderHeaderTitle()}
-        <NavigationTabs plugins={this.props.plugins} handleCategorySelect={this.props.handleCategorySelect} />
+        <NavigationTabs plugins={this.props.plugins} categorySelected={this.props.categorySelected} handleCategorySelect={this.props.handleCategorySelect} />
       </div>
     );
   }

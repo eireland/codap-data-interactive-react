@@ -17,9 +17,9 @@
 .cardlistWrapper.Utilities {
   background-color: var(--cc-orange-light4);
 }
-.cardlistWrapper.Data-Games {
+.cardlistWrapper.Data.Games {
   background-color: var(--cc-charcoal-light2);
 }
-.cardlistWrapper.Data-Worlds {
+.cardlistWrapper.Data.Worlds {
   background-color: var(--feedback-green-light4);
 }

@@ -7,7 +7,6 @@ export const CardList = props => {
   let { plugins, categorySelected } = props;
   let cardlistWrapperClassNames = `cardlistWrapper ${categorySelected}`
   let pluginsToShow = plugins.filter(plugin => plugin.categories.includes(categorySelected));
-  console.log("In cardlist:", categorySelected);
   return (
     <div className={cardlistWrapperClassNames}>
       <div className="card-list">
