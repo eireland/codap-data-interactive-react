@@ -12,7 +12,8 @@ export class Card extends React.PureComponent{
   render(){
     let { plugin } = this.props;
     let categoryClassName = plugin.categories[0].replace(" ","-");
-    let cardClassNames = `card ${categoryClassName}`
+    // let cardClassNames = `card ${categoryClassName}`
+    let cardClassNames = `card`
     return (
       <div className={cardClassNames}>
         {this.renderPluginTitle()}

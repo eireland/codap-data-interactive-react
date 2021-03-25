@@ -4,11 +4,17 @@ import { Card } from "../card/card";
 import "./card-list.css";
 
 export const CardList = props => {
+  let { plugins, categorySelected } = props;
+  let cardlistWrapperClassNames = `cardlistWrapper ${categorySelected}`
+  let pluginsToShow = plugins.filter(plugin => plugin.categories.includes(categorySelected));
+  console.log("In cardlist:", categorySelected);
   return (
-    <div className="card-list">
-      {props.plugins.map((plugin, index) =>
-        <Card key={index} plugin={plugin} />
-      )}
+    <div className={cardlistWrapperClassNames}>
+      <div className="card-list">
+        {pluginsToShow.map((plugin, index) =>
+          <Card key={index} plugin={plugin} />
+        )}
+      </div>
     </div>
   )
 }

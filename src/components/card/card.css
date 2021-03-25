@@ -11,9 +11,10 @@
   transition: transform 0.25s ease-out;
   color: var(--cc-charcoal);
   min-height: 200px;
+  background-color: white;
 }
 
-.card.Partners {
+/* .card.Partners {
   background-color: var(--cc-teal-light5);
 }
 .card.Utilities {
@@ -24,7 +25,7 @@
 }
 .card.Data-Worlds {
   background-color: var(--feedback-green-light4);
-}
+} */
 
 .pluginTitle {
   font-weight: bold;

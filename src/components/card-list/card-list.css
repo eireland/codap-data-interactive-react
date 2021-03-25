@@ -1,7 +1,25 @@
+@import "../../var.css";
+
+.cardlistWrapper {
+  width: 100%;
+}
 .card-list {
-  top: 100px;
   margin: 15px 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
+  padding: 15px 0;
+}
+
+.cardlistWrapper.Partners {
+  background-color: var(--cc-teal-light5);
+}
+.cardlistWrapper.Utilities {
+  background-color: var(--cc-orange-light4);
+}
+.cardlistWrapper.Data-Games {
+  background-color: var(--cc-charcoal-light2);
+}
+.cardlistWrapper.Data-Worlds {
+  background-color: var(--feedback-green-light4);
 }

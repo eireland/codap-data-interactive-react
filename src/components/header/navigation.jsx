@@ -1,33 +1,29 @@
-import React from 'react';
+import React from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { getCategories } from "../../utils/util";
 import "./navigation.css"
 
 export class NavigationTabs extends React.PureComponent {
   render() {
-    const categories = this.getCategories(this.props.plugins);
+    const categories = getCategories(this.props.plugins);
     return (
-      <div className="navigationTabs">
-        {categories.map((category, index) =>
-          <button key={`${index}`} className={`tab section${category}Tab`} onClick={() => this.handleCategorySelect(category)}>
-            {category}
-          </button>
-        )}
-      </div>
+      <>
+        <div className="navigationTabs">
+          {/* <Tabs>
+          <TabList> */}
+          {categories.map((category, index) =>
+            <div key={`${index}`} className={`tab ${category}`} value={category} onClick={(e) => {
+              console.log("NavigationTab: ", e.target.value);
+              this.props.handleCategorySelect(e.target.value)
+            }
+            }>
+              {category}
+            </div>
+          )}
+          {/* </TabList>
+        </Tabs> */}
+        </div>
+      </>
     );
-  }
-
-  handleCategorySelect(category) {
-    // alert(`clicked on ${category}`);
-  }
-
-  getCategories() {
-    let categoryArray = [];
-    this.props.plugins.map(plugin => {
-      plugin.categories.forEach(category => {
-        if (!categoryArray.includes(category)) {
-          categoryArray.push(category)
-        }
-      })
-    })
-    return categoryArray;
   }
 }
