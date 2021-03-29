@@ -14,19 +14,6 @@
   background-color: white;
 }
 
-/* .card.Partners {
-  background-color: var(--cc-teal-light5);
-}
-.card.Utilities {
-  background-color: var(--cc-orange-light4);
-}
-.card.Data-Games {
-  background-color: var(--cc-charcoal-light2);
-}
-.card.Data-Worlds {
-  background-color: var(--feedback-green-light4);
-} */
-
 .pluginTitle {
   font-weight: bold;
   font-size: 18px;
@@ -40,6 +27,10 @@
 
 .pluginDescription {
   margin: 10px;
+  font-weight: normal;
+  color: var(--cc-charcoal);
+  font-size: 16px;
+
 }
 .pluginDescription > a {
   text-decoration: none;

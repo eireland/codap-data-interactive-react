@@ -55,7 +55,7 @@
 }
 
 .tab.Data.Games {
-  background-color: var(--cc-charcoal-light2);
+  background-color: var(--support-blue-light2);
 }
 
 .tab.Data.Worlds {
@@ -71,7 +71,7 @@ background-color: var(--feedback-green-light4);
 }
 
 .tab.Data.Games:hover {
-  background-color: var(--cc-charcoal-light1);
+  background-color: var(--support-blue-dark1);
 }
 
 .tab.Data.Worlds:hover {
@@ -91,7 +91,7 @@ background-color: var(--feedback-green-light2);
 }
 
 .tab.Data.Games.selected {
-    background-color: var(--cc-charcoal-light1);
+    background-color: var(--support-blue-light3);
     border-bottom: none;
 }
 
