@@ -17,7 +17,7 @@ export class Card extends React.PureComponent{
     return (
       <div className={cardClassNames}>
         {this.renderPluginTitle()}
-        <p className="pluginDescription">{this.renderHTML(plugin.description)}</p>
+        {/* <p className="pluginDescription">{this.renderHTML(plugin.description)}</p> */}
         <a className="embeddableLink" href={this.cleanPath()} target="_blank" rel="noopener noreferrer">
           Embeddable Link
         </a>
@@ -48,6 +48,7 @@ export class Card extends React.PureComponent{
     return (
       <a href={`${codapUrl}?di=${pluginPath}`} className="pluginTitle" target="_blank" rel="noopener noreferrer">
         {plugin.title}
+        <p className="pluginDescription">{this.renderHTML(plugin.description)}</p>
       </a>
     );
   }
