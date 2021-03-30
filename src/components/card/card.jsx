@@ -5,10 +5,6 @@ import parse from "html-react-parser";
 import "./card.css"
 
 export class Card extends React.PureComponent{
-  // constructor(props){
-  //   super();
-  // }
-
   render(){
     let { plugin } = this.props;
     let categoryClassName = plugin.categories[0].replace(" ","-");
@@ -16,8 +12,7 @@ export class Card extends React.PureComponent{
     let cardClassNames = `card`
     return (
       <div className={cardClassNames}>
-        {this.renderPluginTitle()}
-        {/* <p className="pluginDescription">{this.renderHTML(plugin.description)}</p> */}
+        {this.renderPluginTitleAndDescription()}
         <a className="embeddableLink" href={this.cleanPath()} target="_blank" rel="noopener noreferrer">
           Embeddable Link
         </a>
@@ -25,7 +20,7 @@ export class Card extends React.PureComponent{
     );
   }
 
-  renderPluginTitle() {
+  renderPluginTitleAndDescription() {
     let { plugin } = this.props;
     let codapUrl = "http://codap.concord.org/releases/latest/";
     let pluginPath = "";
