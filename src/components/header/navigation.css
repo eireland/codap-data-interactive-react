@@ -107,13 +107,7 @@ ul {
   padding-inline-start: 0;
 }
 
-.tabTip {
-  position: relative;
-  top: 35%;
-  z-index: 50;
-}
-
-.tabTip .tooltipText {
+.tooltipText {
   visibility: hidden;
   background-color: var(--cc-charcoal-hint);
   color: #fff;
@@ -126,9 +120,11 @@ ul {
   /* Position the tooltip */
   position: absolute;
   left: 50%;
+  top: 85%;
   margin-left: -125px;
 }
 
-.tab:hover .tabTip .tooltipText {
+.tab:hover .tooltipText {
   visibility: visible;
+  z-index: 10;
 }
