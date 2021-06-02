@@ -10,7 +10,8 @@
   transform: translateZ(0);
   transition: transform 0.25s ease-out;
   color: var(--cc-charcoal);
-  min-height: 200px;
+  min-height: 210px;
+  min-width: 210px;
   background-color: white;
 }
 
@@ -29,7 +30,7 @@
   margin: 10px;
   font-weight: normal;
   color: var(--cc-charcoal);
-  font-size: 16px;
+  font-size: 14px;
   height: 135px;
 }
 .pluginDescription > a {

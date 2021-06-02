@@ -1,7 +1,6 @@
 export function getCategories(plugins) {
   let categoryArray = [];
-  let queryParam = window.location.search.substr(1);
-
+  
   plugins.map(plugin => {
     plugin.categories.forEach(category => {
       if (!categoryArray.includes(category)) {
@@ -9,8 +8,13 @@ export function getCategories(plugins) {
       }
     })
   })
-  if (!queryParam.includes("dev")) {
+  if (!isDevMode()) {
     categoryArray.splice(categoryArray.indexOf("Utilities"),1);
   }
   return categoryArray;
+}
+
+export function isDevMode() {
+  let queryParam = window.location.search.substr(1);
+  return queryParam.includes("dev")
 }

@@ -1,13 +1,17 @@
 import React from 'react';
-import "./header.css"
 import { NavigationTabs } from "./navigation";
+import { DropdownSelect } from "./dropdown-select";
+
+import "./header.css"
 
 export class Header extends React.Component {
   render() {
     return (
       <div className="header">
         {this.renderHeaderTitle()}
-        <NavigationTabs plugins={this.props.plugins} categorySelected={this.props.categorySelected} handleCategorySelect={this.props.handleCategorySelect} />
+        <NavigationTabs plugins={this.props.plugins}
+                        categorySelected={this.props.categorySelected}
+                        handleCategorySelect={this.props.handleCategorySelect} />
       </div>
     );
   }
@@ -22,6 +26,9 @@ export class Header extends React.Component {
         </div>
         <div className="headerCenter">
           <span className="title">CODAP Data Interactive Plugins</span>
+        </div>
+        <div className="headerRight">
+          <DropdownSelect branchSelected={this.props.branchSelected} handleBranchSelect={this.props.handleBranchSelect}/>
         </div>
       </div>
 
