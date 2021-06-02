@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4fd665ef065cdd456e0d9b7d7ecc5de5",
+    "revision": "686dc69e59013f8d5258c2b79521ded1",
     "url": "/codap-data-interactive-react/index.html"
   },
   {
-    "revision": "b1f5280ee99e05e56bcc",
-    "url": "/codap-data-interactive-react/static/css/main.4498e1e6.chunk.css"
+    "revision": "7d4794c0724b09870bde",
+    "url": "/codap-data-interactive-react/static/css/main.048dc08c.chunk.css"
   },
   {
     "revision": "74a326a2b32b90d09632",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/codap-data-interactive-react/static/js/2.6acf1abd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b1f5280ee99e05e56bcc",
-    "url": "/codap-data-interactive-react/static/js/main.c5bcb5fc.chunk.js"
+    "revision": "7d4794c0724b09870bde",
+    "url": "/codap-data-interactive-react/static/js/main.9554b50b.chunk.js"
   },
   {
     "revision": "5545221cb5f878e7b280",

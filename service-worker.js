@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/codap-data-interactive-react/precache-manifest.a7410f12801bff1bf5db35ea2e47d7ac.js"
+  "/codap-data-interactive-react/precache-manifest.03fdd28686c5c4a75eaade1499eb0916.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/codap-data-interactive-react/static/css/main.4498e1e6.chunk.css",
-    "main.js": "/codap-data-interactive-react/static/js/main.c5bcb5fc.chunk.js",
-    "main.js.map": "/codap-data-interactive-react/static/js/main.c5bcb5fc.chunk.js.map",
+    "main.css": "/codap-data-interactive-react/static/css/main.048dc08c.chunk.css",
+    "main.js": "/codap-data-interactive-react/static/js/main.9554b50b.chunk.js",
+    "main.js.map": "/codap-data-interactive-react/static/js/main.9554b50b.chunk.js.map",
     "runtime-main.js": "/codap-data-interactive-react/static/js/runtime-main.632aa334.js",
     "runtime-main.js.map": "/codap-data-interactive-react/static/js/runtime-main.632aa334.js.map",
     "static/js/2.6acf1abd.chunk.js": "/codap-data-interactive-react/static/js/2.6acf1abd.chunk.js",
     "static/js/2.6acf1abd.chunk.js.map": "/codap-data-interactive-react/static/js/2.6acf1abd.chunk.js.map",
     "index.html": "/codap-data-interactive-react/index.html",
-    "precache-manifest.a7410f12801bff1bf5db35ea2e47d7ac.js": "/codap-data-interactive-react/precache-manifest.a7410f12801bff1bf5db35ea2e47d7ac.js",
+    "precache-manifest.03fdd28686c5c4a75eaade1499eb0916.js": "/codap-data-interactive-react/precache-manifest.03fdd28686c5c4a75eaade1499eb0916.js",
     "service-worker.js": "/codap-data-interactive-react/service-worker.js",
-    "static/css/main.4498e1e6.chunk.css.map": "/codap-data-interactive-react/static/css/main.4498e1e6.chunk.css.map",
+    "static/css/main.048dc08c.chunk.css.map": "/codap-data-interactive-react/static/css/main.048dc08c.chunk.css.map",
     "static/js/2.6acf1abd.chunk.js.LICENSE.txt": "/codap-data-interactive-react/static/js/2.6acf1abd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.632aa334.js",
     "static/js/2.6acf1abd.chunk.js",
-    "static/css/main.4498e1e6.chunk.css",
-    "static/js/main.c5bcb5fc.chunk.js"
+    "static/css/main.048dc08c.chunk.css",
+    "static/js/main.9554b50b.chunk.js"
   ]
 }
