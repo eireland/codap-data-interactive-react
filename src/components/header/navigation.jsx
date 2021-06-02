@@ -12,19 +12,19 @@ export const NavigationTabs = (props) => {
 
   return (
     <>
-      <div className="navigationTabs">
-        {categories.map((category, index) => {
-          const tip = (categoryTooltip.filter(c => c.category === category))[0];
-          return (
-            <div key={`${index}`} className={`tab ${category} ${props.categorySelected === category ? "selected" : ""}`} value={category}
-              onClick={() => props.handleCategorySelect(category)}>
-              {category}
-              {tip && <span className="tooltipText">{tip.tooltip}</span>}
-            </div>
-          )
-        }
-        )}
-      </div>
+      { categories && <div className="navigationTabs">
+          {categories.map((category, index) => {
+            const tip = (categoryTooltip.filter(c => c.category === category))[0];
+            return (
+              <div key={`${index}`} className={`tab ${category} ${props.categorySelected === category ? "selected" : ""}`} value={category}
+                onClick={() => props.handleCategorySelect(category)} title={tip? tip.tooltip : "" }>
+                {category}
+              </div>
+            )
+          }
+          )}
+        </div>
+      }
     </>
   );
 }

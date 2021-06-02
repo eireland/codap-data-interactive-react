@@ -6,9 +6,6 @@ import "./card.css"
 
 export class Card extends React.PureComponent{
   render(){
-    let { plugin } = this.props;
-    let categoryClassName = plugin.categories[0].replace(" ","-");
-    // let cardClassNames = `card ${categoryClassName}`
     let cardClassNames = `card`
     return (
       <div className={cardClassNames}>
@@ -21,8 +18,7 @@ export class Card extends React.PureComponent{
   }
 
   renderPluginTitleAndDescription() {
-    let { plugin } = this.props;
-    let codapUrl = "http://codap.concord.org/releases/latest/";
+    let { plugin, url } = this.props;
     let pluginPath = "";
     let urlRoot = window.location.origin+window.location.pathname;
     if (plugin.path.match(/^http/i)) {
@@ -32,16 +28,16 @@ export class Card extends React.PureComponent{
       urlRoot=urlRoot.replace(/index.html$/, '');
       pluginPath = urlRoot+plugin.path;
     }
-    if (codapUrl.match(/^https/i) && !pluginPath.match(/^https/i)) {
+    if (url.match(/^https/i) && !pluginPath.match(/^https/i)) {
       pluginPath=pluginPath.replace(/http/i,'https');
     }
 
-    if (pluginPath.match(/^https/i) && !codapUrl.match(/^https/i)) {
-      codapUrl=codapUrl.replace(/http/i,'https');
+    if (pluginPath.match(/^https/i) && !url.match(/^https/i)) {
+      url=url.replace(/http/i,'https');
     }
 
     return (
-      <a href={`${codapUrl}?di=${pluginPath}`} className="pluginTitle" target="_blank" rel="noopener noreferrer">
+      <a href={`${url}?di=${pluginPath}`} className="pluginTitle" target="_blank" rel="noopener noreferrer">
         {plugin.title}
         <p className="pluginDescription">{this.renderHTML(plugin.description)}</p>
       </a>
